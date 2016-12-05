@@ -7,7 +7,17 @@
 <body>
 <script type="text/javascript">
     function getObjectLength(obj){
-        return Object.keys(obj).length;
+//        return Object.keys(obj).length;
+//        IE9以下版本不支持Objec.keys()
+
+        if (!Object.keys) Object.keys = function(o) {
+            if (o !== Object(o))
+                throw new TypeError('Object.keys called on a non-object');
+            var k=[],p;
+            for (p in o) if (Object.prototype.hasOwnProperty.call(o,p)) k.push(p);
+            return k;
+        };
+        return Object.keys(obj);
     }
 
     var obj = {
@@ -20,6 +30,7 @@
         e:0
     };
     console.log(getObjectLength(obj));
+    console.log(obj);
 </script>
 </body>
 </html>
