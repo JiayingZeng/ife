@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>遍历数组</title>
+</head>
+<body>
+<script type="text/javascript">
+    function each(arr,fn){
+        arr.forEach(fn)
+    }
+
+    /*var arr = ['java','c','php','html'];
+    function output(item){
+        console.log(item);
+    }
+    each(arr,output);*/
+    var arr = ['java', 'c', 'php', 'html'];
+    function output(item, index) {
+        console.log(index + ': ' + item)
+    }
+    each(arr, output);
+</script>
+</body>
+</html>

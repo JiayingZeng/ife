@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>判断数据类型</title>
+</head>
+<body>
+<p>打开控制台</p>
+<p>参考链接</p>
+<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/typeof">https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/typeof</a>
+<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/instanceof">https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/instanceof</a>
+<a href="http://javascript.ruanyifeng.com/grammar/types.html#toc1">http://javascript.ruanyifeng.com/grammar/types.html#toc1</a>
+<a href="http://javascript.ruanyifeng.com/oop/prototype.html#toc5">http://javascript.ruanyifeng.com/oop/prototype.html#toc5</a>
+<a href="http://javascript.ruanyifeng.com/stdlib/object.html#toc5">http://javascript.ruanyifeng.com/stdlib/object.html#toc5</a>
+<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/toString">https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/toString</a>
+<script>
+    var type=function (o) {
+        var s = Object.prototype.toString.call(o);
+        console.log(s.match(/\[object (.*?)\]/)[1].toLowerCase());
+    };
+    type(1);
+    type([1, 2]);
+    type({q: 1});
+    type(null);
+    type(undefined);
+    type(o);
+    type(/abcd/);
+    type(new Date());
+    type('12434');
+    type(NaN);
+    type(true);
+    type(type);
+var o;
+</script>
+</body>
+</html>

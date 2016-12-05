@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>数组去重</title>
+</head>
+<body>
+<script type="text/javascript">
+function unique(arr){
+    var n = [];
+    for (var i = 0; i < arr.length; i++) {
+        if(n.indexOf(arr[i])==-1){
+            n.push(arr[i]);
+        }
+    }
+    return n;
+}
+var array=[4,2,4,6,1,"2",2,,4,7,8];
+console.log(unique(array));
+
+    /*function unique(arr){
+        var n = [];
+        var hash = {};
+        for (var i = 0; i < arr.length; i++) {
+            if (!hash[arr[i]]) {
+                hash[arr[i]]=1;
+                n.push(arr[i])
+            }
+        }
+        return n;
+    }
+    var array = [4,2,4,6,1,2,4,7,8];
+    console.log(unique(array));*/
+
+    /*function unique(arr){
+        arr.sort();
+        var n=[arr[0]];
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i] !== n[n.length-1]) {
+                n.push(arr[i]);
+            }
+        }
+        return n;
+    }
+    var array = [4,2,'4',6,1,2,4,7,8];
+    console.log(unique(array));*/
+
+    /*function unique(arr){
+        var n = [];
+        var hash = {};
+        for (var i = 0; i < arr.length; i++) {
+            if(!hash[typeof(arr[i])+arr[i]]){
+                hash[typeof(arr[i])+arr[i]]=1;
+                n.push(arr[i])
+            }
+        }
+        return n;
+    }
+    var array=[4,2,4,6,1,"2",4,7,,8];
+    console.log(unique(array));*/
+
+    /*function onlyUnique(value, index, self) { 
+        return self.indexOf(value) === index;
+    }
+
+    // usage example:
+    var a = ['a','', 1, 'a', 2, '1'];
+    var unique = a.filter( onlyUnique );
+    console.log(unique);*/
+</script>
+</body>
+</html>

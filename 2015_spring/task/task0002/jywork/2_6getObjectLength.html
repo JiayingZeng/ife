@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>获取一个对象里面第一层元素的数量</title>
+</head>
+<body>
+<script type="text/javascript">
+    function getObjectLength(obj){
+        return Object.keys(obj).length;
+    }
+
+    var obj = {
+        a:1,
+        b:2,
+        c:{
+            c1:3,
+            c2:4
+        },
+        e:0
+    };
+    console.log(getObjectLength(obj));
+</script>
+</body>
+</html>
