@@ -10,22 +10,30 @@
 <script type="text/javascript">
     window.onload=function(){
         var btn = document.getElementById('btn');
-        
+        var output = document.getElementById('output');
+        var input = document.getElementById('input');
+
         btn.addEventListener('click',function(){
-            var output = document.getElementById('output');
-            var input = document.getElementById('input');
             var inputVal = input.value;
             if(isEmail(inputVal) || isMobilePhone(inputVal)){
                 output.innerHTML='验证通过';
+                output.style.color = 'green';
             }else{
                 output.innerHTML='请输入正确的邮箱或手机号码';
+                output.style.color = 'red';
             }
         });
+        input.addEventListener('focus',function () {
+            output.innerHTML = '';
+        });
         function isEmail(emailStr){
-            return /@(.)+.com$/g.test(emailStr);
+            var emailRegExp=/^[a-zA-Z0-9~`!#$%^&*-_+={}’|.?/]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+//            var emailRegExp=/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/ ;
+            console.log(emailRegExp.exec(emailStr));
+            return emailRegExp.test(emailStr);
         }
         function isMobilePhone(phone){
-            return !!(typeof phone == 'number' && phone.length === 11 && /^1+/.test(phone));
+            return (/^\d{11}$/.test(phone));
         }
     }
     
