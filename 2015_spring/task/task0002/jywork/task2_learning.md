@@ -33,9 +33,7 @@
 
 #### 参考链接
 * https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/typeof
-* https://developer.mozilla.org/
-
-zh-CN/docs/Web/JavaScript/Reference/Operators/instanceof
+* https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/instanceof
 * http://javascript.ruanyifeng.com/grammar/types.html#toc1
 * http://javascript.ruanyifeng.com/oop/prototype.html#toc5
 * http://javascript.ruanyifeng.com/stdlib/object.html#toc5
