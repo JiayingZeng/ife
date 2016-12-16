@@ -16,31 +16,18 @@
     实例对象可能会自定义toString方法，覆盖掉Object.prototype.toString方法。通过函数的call方法，可以在任意值上调用Object.prototype.toString方法，帮助我们判断这个值的类型。
 
     | 类型 | 返回值  |
-    
     |---|
-    
     |  数值：|  [object Number] |
-    
     |   字符串：| [object String] |
-    
     |  布尔值：| [object Boolean] |
-    
     |   undefined：| [object Undefined] |
-    
     |   null：| [object Null] |
-    
     |   数组：| [object Array] |
-    
     |   arguments对象：| [object Arguments] |
-    
     |   函数：| [object Function] |
-    
     |   Error对象：| [object Error] |
-    
     |   Date对象：| [object Date] |
-    
     |   RegExp对象：| [object RegExp] |
-    
     |   其他对象：| [object " + 构造函数的名称 + "] |
     
 
