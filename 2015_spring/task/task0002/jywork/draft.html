@@ -12,7 +12,11 @@
         }
     });
     my_obj.foo=1;
-    alert(Object.keys(my_obj));
+    console.log(Object.keys(my_obj));
+    console.log(Object.getOwnPropertyNames(my_obj));
+
+    var an_obj = { 100: 'a', 2: 'b', 7: 'c' };
+    console.log(Object.keys(an_obj));
 </script>
 </body>
 </html>
