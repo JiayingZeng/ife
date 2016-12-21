@@ -1,7 +1,7 @@
 
 # 我在百度web前端技术学院的练习
 ## 2015_spring
-   [task0002](./2015_spring/task/task0002/jywork)
+   [task0002](./2015_spring/task/task0002/jywork/task2_learning.md)
    
    
    

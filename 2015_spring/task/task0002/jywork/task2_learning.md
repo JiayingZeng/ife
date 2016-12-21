@@ -73,3 +73,17 @@
 * https://www.w3.org/TR/html-markup/input.email.html#input.email.attrs.value.multiple
 * http://emailregex.com/
 * https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp
+
+## DOM
+### 操作DOM
+#### 参考链接
+* [你不需要jQuery](http://www.webhek.com/you-do-not-need-jquery)
+
+#### 知识点
+* 添加className:
+`el.classList.add(className)`  
+`el.className+=' '+className` 
+* 删除className:
+`el.classList.remove(className)`
+`el.className.replace(new RegExp('(^|\\b)'+className.split(' ').join('|')+'(\\b|$)','gi'),'')`
+* 是否为同一个

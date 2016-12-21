@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>操作DOM</title>
+    <style>
+        .red{color: red;}
+        .blue{color: blue;}
+        .info{color: green;}
+    </style>
+</head>
+<body>
+<div class="container">
+    <p class="name">Amy</p>
+    <p class="info blue">she is a little girl</p>
+</div>
+
+<script>
+    // 为element增加一个样式名为newClassName的新样式
+    function addClass(element, newClassName) {
+        if(element.classList) {
+            element.classList.add(newClassName);
+        }else {
+            element.className += ''+ newClassName;
+        }
+    }
+
+    // 移除element中的样式oldClassName
+    function removeClass(element, oldClassName) {
+        if(element.classList) {
+            element.classList.remove(oldClassName);
+        }else {
+            element.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), '');
+        }
+    }
+
+    // 判断siblingNode和element是否为同一个父元素下的同一级的元素，返回bool值
+    function isSiblingNode(element, siblingNode) {
+        return element.parentNode === siblingNode.parentNode;
+    }
+
+    // 获取element相对于浏览器窗口的位置，返回一个对象{x, y}
+    function getPosition(element) {
+        var rect = element.getBoundingClientRect();
+        var x = rect.x;
+        var y = rect.y;
+        return {x, y};
+    }
+
+    var user = document.querySelector('.name');
+    var info = document.querySelector('.info');
+    var container = document.querySelector('.container');
+
+    window.onload=function () {
+        addClass(user, 'red');
+        removeClass(info, 'info');
+        console.log('isSiblingNode(user,info):',isSiblingNode(user,info));
+        console.log('isSiblingNode(container,info):',isSiblingNode(container,info));
+
+        getPosition(info);
+    }
+
+
+</script>
+</body>
+</html>
