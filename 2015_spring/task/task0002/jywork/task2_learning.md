@@ -1,3 +1,6 @@
+
+[TOC]
+
 # 知识点
 ## task0002 JavaScript数据类型及语言基础
 ### 检测数据类型
@@ -83,7 +86,9 @@
 * 添加className:
 `el.classList.add(className)`  
 `el.className+=' '+className` 
-* 删除className:
+
+* 删除className
 `el.classList.remove(className)`
 `el.className.replace(new RegExp('(^|\\b)'+className.split(' ').join('|')+'(\\b|$)','gi'),'')`
+
 * 是否为同一个
