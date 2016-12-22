@@ -83,12 +83,19 @@
 * [你不需要jQuery](http://www.webhek.com/you-do-not-need-jquery)
 
 #### 知识点
+
 * 添加className:
-`el.classList.add(className)`  
-`el.className+=' '+className` 
+    `el.classList.add(className)`  
+    `el.className+=' '+className` 
 
 * 删除className
-`el.classList.remove(className)`
-`el.className.replace(new RegExp('(^|\\b)'+className.split(' ').join('|')+'(\\b|$)','gi'),'')`
+    `el.classList.remove(className)`
+    `el.className.replace(new RegExp('(^|\\b)'+className.split(' ').join('|')+'(\\b|$)','gi'),'')`
 
-* 是否为同一个
+* 是否为同一个父元素下的同一级的元素,
+    `el.parentNode===el.parentNode`
+    
+### 实现mini$(),不用document.queryselector()
+* 参考链接
+    [详解jQuery选择器正则表达式](http://blog.csdn.net/mole/article/details/43371073)
+    参考jQuery源码Sizzle部分
